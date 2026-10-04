@@ -6,7 +6,7 @@
 
 set -euo pipefail
 
-PROJECT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+PROJECT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/" && pwd)"
 PROJECT="$PROJECT_DIR/WalkPadSteps.xcodeproj"
 SCHEME="WalkPadSteps Watch App"
 DERIVED_DATA="$PROJECT_DIR/.build/DerivedData"
