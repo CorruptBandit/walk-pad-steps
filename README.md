@@ -1,4 +1,4 @@
-# WalkPad Steps
+# WalkPadSteps
 
 Standalone watchOS app (no companion iPhone app required) for estimating and
 logging steps while walking on a treadmill/walking pad at a desk, where the
