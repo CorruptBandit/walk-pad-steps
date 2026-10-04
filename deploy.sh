@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+
 # Builds and installs WalkPadSteps onto the paired Apple Watch. Re-run this
 # every ~7 days to refresh a free Apple ID's expiring provisioning profile.
 # Usage: ./deploy.sh (optionally set WATCH_DEVICE_ID to skip auto-detection)
@@ -12,7 +13,7 @@ DERIVED_DATA="$PROJECT_DIR/.build/DerivedData"
 CONFIGURATION="Debug"
 
 if [ -z "${WATCH_DEVICE_ID:-}" ]; then
-  WATCH_DEVICE_ID=$(xcrun devicectl list devices | awk '/watchOS/ {for (i=1;i<=NF;i++) if ($i ~ /^[0-9A-F]{8}-[0-9A-F]{16}$/) print $i}' | head -n 1)
+  WATCH_DEVICE_ID=$(xcrun devicectl list devices | awk '/Apple Watch/ {for (i=1;i<=NF;i++) if ($i ~ /^[0-9A-F]{8}-[0-9A-F]{16}$/) print $i}' | head -n 1)
 fi
 
 if [ -z "$WATCH_DEVICE_ID" ]; then
